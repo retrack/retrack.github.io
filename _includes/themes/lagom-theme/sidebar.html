@@ -1,0 +1,23 @@
+<nav>
+  <a href="/">
+    <img src="{{ ASSET_PATH }}/logo.png" id="logo" alt="Blog logo"/>
+  </a>
+  <h1><a href="/">{{ site.author.name }}</a></h1>
+  <hr/>
+  <ul>
+  <p>
+  {{ site.tagline }}
+  </p>
+  <p>
+  {% assign pages_list = site.pages %}
+  {% assign group = 'navigation' %}
+  {% include JB/pages_list %}
+  </p>
+  <hr/>
+  <div>
+    <div id="social">
+      {% include themes/lagom-theme/social.html %}
+    </div>
+  </div>
+  </ul>
+</nav>
